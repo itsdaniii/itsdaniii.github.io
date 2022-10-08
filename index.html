@@ -1,1 +1,244 @@
-"Hello World" 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danielle's Website</title>
+
+    <!--CSS Files-->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="skins/colour-1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+</head>
+<body>
+    <!--MAIN Container Start-->
+    <div class"main-container">
+        <!--ASIDE Container Start-->
+        <div class="aside-container">
+            <div class="logo">
+                <a href="#">DL</a>
+            </div>
+            <div class="nav-toggler">
+                <span></span>
+            </div>
+            <ul class="nav">
+                <li><a href="#" class="active"><i class="fa fa-home"></i>Home</a></li>
+                <li><a href="#"><i class="fa fa-user"></i>About</a></li>
+                <li><a href="#"><i class="fa fa-list"></i>Resumé</a></li>
+                <li><a href="#"><i class="fa fa-comments"></i>Contact</a></li>
+            </ul>
+        </div>
+        <!--ASIDE Container End-->
+
+        <!--MAIN Content Start-->
+        <div class="main-content">
+            <!--HOME Section Start-->
+            <section class="home-section hidden">
+                <div class="container">
+                    <div class="row">
+                        <div class="home-info padd-15">
+                            <h3 class="hello">Hi there! My name is <span class="name">Danielle Lim</span></h3>
+                            <h3><span class="first-text">I'm a</span></h3>
+                            <h3><span class="typing-text">Software Engineer</span></h3>
+                            <!-- <h3 class="my-profession">I'm a <span class="typing">CPA (Chartered Professional Accountant)</span></h3>
+                            <h3 class="my-profession">I'm a <span class="typing">sports lover</span></h3>
+                            <h3 class="my-profession">I'm a <span class="typing">lifetime learner</span></h3>
+                            <h3 class="my-profession">I'm a <span class="typing">connector</span></h3>
+                            <h3 class="my-profession">I'm a <span class="typing">Marvel fanatic</span></h3> -->
+                            <p>DESCRIPTION</p>
+                            <a href="#contact" class="btn hire-me">Open to Work</a>
+                        </div>
+                        <div class="home-img padd-15">
+                            <img src="images/Blurred-Circle.png" alt="Profile Picture">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--HOME Section End-->
+
+            <!--ABOUT Section Start-->
+            <section class="about section">
+                <div class="container">
+                    <div class="row">
+                        <div class="section-title padd-15">
+                            <h2>About Me</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="about-content padd-15">
+                       <div class="row">
+                        <div class="about-text padd-15">
+                            <h3> Hi, I'm Danielle Lim and I'm a <span>Software Engineer</span></h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis esse ad quia nesciunt consequuntur labore, inventore autem maxime error voluptatem quasi illo sit animi alias aliquid obcaecati. Aspernatur, delectus doloribus.</p>
+                        </div>
+                       </div>
+                       <div class="row">
+                        <div class="personal-info padd-15">
+                            <div class="row">
+                                <div class="info-item padd-15">
+                                    <p> Age : <span>27 </span></p>
+                                </div>
+                                <div class="info-item padd-15">
+                                    <p> Degree : <span>Bachelor of Computer Science </span></p>
+                                </div>
+                                <div class="info-item padd-15">
+                                    <p> City : <span>Vancouver, Canada </span></p>
+                                </div>
+                                <div class="info-item padd-15">
+                                    <p> Email : <span>limdaniellee@gmail.com </span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skills padd-15">
+                            <div class="row">
+                                <div class="skill-item padd-15">
+                                    <h5>Java</h5>
+                                    <div class="progress">
+                                        <div class="progress-in" style="width: 80%"></div>
+                                        <div class="skill-percent">80%</div>
+                                    </div>
+                                </div>
+                                <div class="skill-item padd-15">
+                                    <h5>C++</h5>
+                                    <div class="progress">
+                                        <div class="progress-in" style="width: 80%"></div>
+                                        <div class="skill-percent">80%</div>
+                                    </div>
+                                </div>
+                                <div class="skill-item padd-15">
+                                    <h5>HTML</h5>
+                                    <div class="progress">
+                                        <div class="progress-in" style="width: 70%"></div>
+                                        <div class="skill-percent">70%</div>
+                                    </div>
+                                </div>
+                                <div class="skill-item padd-15">
+                                    <h5>CSS</h5>
+                                    <div class="progress">
+                                        <div class="progress-in" style="width: 70%"></div>
+                                        <div class="skill-percent">70%</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="buttons padd-15">
+                                <a ref="#" class="btn">Download Resumé</a>
+                                <a ref="#contact" class="btn hire-me">Hire Me</a>
+                            </div>
+                        </div>
+                    </div> 
+                    <div class="row">
+                        <div class="education padd-15">
+                            <h3 class="title">Education</h3>
+                            <div class="row">
+                                <div class="timeline-box padd-15">
+                                    <div class="timeline shadow-dark">
+                                        <!-- TIMELINE ITEM -->
+                                        <div class="timeline-item">
+                                            <div class="circle-dot"></div>
+                                            <h3 class="timeline-date">
+                                                <i class="calendar"></i> Sept 2021 - May 2024 (Expected)
+                                            </h3>
+                                            <h4 class="timeline-title">Bachelor of Computer Science</h4>
+                                            <p class="timeline-text">University of British Columbia</p>
+                                        </div>
+                                        <!-- TIMELINE ITEM -->
+                                        <div class="timeline-item">
+                                            <div class="circle-dot"></div>
+                                            <h3 class="timeline-date">
+                                                <i class="calendar"></i> Sept 2019
+                                            </h3>
+                                            <h4 class="timeline-title">Chartered Professional Accountant (CPA)</h4>
+                                            <p class="timeline-text">CPA Western School of Business</p>
+                                        </div>
+                                        <!-- TIMELINE ITEM -->
+                                        <div class="timeline-item">
+                                            <div class="circle-dot"></div>
+                                            <h3 class="timeline-date">
+                                                <i class="calendar"></i> May 2018 - Nov 2018
+                                            </h3>
+                                            <h4 class="timeline-title">Graduate Diploma in Professional Accounting</h4>
+                                            <p class="timeline-text">University of Toronto</p>
+                                        </div>
+                                        <!-- TIMELINE ITEM -->
+                                        <div class="timeline-item">
+                                            <div class="circle-dot"></div>
+                                            <h3 class="timeline-date">
+                                                <i class="calendar"></i> Sept 2013 - May 2018
+                                            </h3>
+                                            <h4 class="timeline-title">Bachelor of Commerce (Honours)</h4>
+                                            <p class="timeline-text">University of British Columbia, Sauder School of Business</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="experience padd-15">
+                            <h3 class="title">Experience</h3>
+                            <div class="row">
+                                <div class="timeline-box padd-15">
+                                    <div class="timeline shadow-dark">
+                                        <!-- TIMELINE ITEM -->
+                                        <div class="timeline-item">
+                                            <div class="circle-dot"></div>
+                                            <h3 class="timeline-date">
+                                                <i class="calendar"></i> May 2022 - Present
+                                            </h3>
+                                            <h4 class="timeline-title">Associate Systems Analyst</h4>
+                                            <p class="timeline-text">Kabam Games Inc.</p>
+                                        </div>
+                                        <!-- TIMELINE ITEM -->
+                                        <div class="timeline-item">
+                                            <div class="circle-dot"></div>
+                                            <h3 class="timeline-date">
+                                                <i class="calendar"></i> Jan 2015 - Dec 2017, Sept 2021 - Dec 2021
+                                            </h3>
+                                            <h4 class="timeline-title">Teaching Assistant</h4>
+                                            <p class="timeline-text">University of British Columbia</p>
+                                        </div>
+                                        <!-- TIMELINE ITEM -->
+                                        <div class="timeline-item">
+                                            <div class="circle-dot"></div>
+                                            <h3 class="timeline-date">
+                                                <i class="calendar"></i> Oct 2020 - Sept 2021
+                                            </h3>
+                                            <h4 class="timeline-title">IT Business Analyst / Project Manager</h4>
+                                            <p class="timeline-text">Peoples Group</p>
+                                        </div>
+                                        <!-- TIMELINE ITEM -->
+                                        <div class="timeline-item">
+                                            <div class="circle-dot"></div>
+                                            <h3 class="timeline-date">
+                                                <i class="calendar"></i> May 2016 - Oct 2020
+                                            </h3>
+                                            <h4 class="timeline-title">Experienced Senior Associate (Audit)</h4>
+                                            <p class="timeline-text">PwC Canada</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </section>
+            <!--ABOUT Section End-->
+        </div>
+        <!--MAIN Content End-->
+
+    </div>
+    <!--MAIN Container End-->
+
+    <!--JavaScript Files-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js" referrerpolicy="no-referrer"></script>
+    <script src="js/app.js"></script>
+    <hav class="navbar">
+        <div class="navbar__container">
+            
+        </div>
+    </hav>
+</body>
+</html>
