@@ -2,10 +2,22 @@
 
 :root {
     --bg-black-900:#f2f2fc;
-    --bg-black-100:#fdf9ff;
+    --bg-black-100:#e9e9e9;
     --bg-black-50:#e8dfec;
     --text-black-900:#302e4d;
     --text-black-700:#504e70;
+    --bg-color: #d8c0b7;
+    --accent-color: #3d6bc7;
+}
+
+body.dark {
+    --bg-black-900:#151515;
+    --bg-black-100:#494949;
+    --bg-black-50:#393939;
+    --text-black-900:#ffffff;
+    --text-black-700:#e9e9e9;
+    --bg-color: #554969;
+    --accent-color: #A5B18F;
 }
 
 body {
@@ -33,13 +45,41 @@ ul {
 }
 
 .section {
-    background: var(--bg-black-900);
+    background: var(--bg-color);
     min-height: 100vh;
     display: block;
     padding: 0 30px;
     opacity: 1;
-    
+    transition: all 0.3s ease;
+    /* position: fixed;
+    left: 270px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    overflow-y: auto;
+    overflow-x: auto; */
 }
+
+/* .section.back-section {
+    z-index: 1;
+}
+
+.section.active {
+    z-index: 2;
+    opacity: 1;
+    animation: slideSection 1s ease;
+}
+
+@keyframes slideSection {
+    0% {
+        transform: translateX(100%)
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+} */
 
 .hidden {
     display: none !important;
@@ -83,7 +123,7 @@ ul {
     content: '';
     height: 4px;
     width: 50px;
-    background-color: var(--skin-color);
+    background-color: var(--accent-color);
     top: 100%;
     left: 0;
 }
@@ -92,7 +132,7 @@ ul {
     content: '';
     height: 4px;
     width: 25px;
-    background-color: var(--skin-color);
+    background-color: var(--accent-color);
     top: 100%;
     left: 0;
     margin-top: 8px;
@@ -115,7 +155,7 @@ ul {
     display: inline-block;
     white-space: nowrap;
     border: none;
-    background: var(--skin-color);
+    background: var(--accent-color);
     transition: all 0.3s ease;
 }
 
@@ -127,8 +167,8 @@ ul {
     box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
 }
 
-/* ====== aside ====== */
-.aside-container {
+/* ====== side bar ====== */
+.sidebar-container {
     width: 270px;
     background: var(--bg-black-100);
     position: fixed;
@@ -141,16 +181,17 @@ ul {
     justify-content: center;
     align-items: center;
     z-index: 10;
+    transition: all 0.3s ease;
 }
 
-.aside-container .logo {
+.sidebar-container .logo {
     position: absolute;
     top: 50px;
     font-size: 30px;
     text-transform: capitalize;
 }
 
-.aside-container .logo a {
+.sidebar-container .logo a {
     color: var(--text-black-900);
     font-weight: 700;
     padding: 15px 20px;
@@ -159,34 +200,34 @@ ul {
     position: relative;
 }
 
-.aside-container .logo a span {
+.sidebar-container .logo a span {
     font-family: 'Clicker Script', cursive;
     font-size: 40px;
 }
 
-.aside-container .logo a::before {
+.sidebar-container .logo a::before {
     content: '';
     position: absolute;
     width: 20px;
     height: 20px;
-    border-bottom: 5px solid var(--skin-color);
-    border-left: 5px solid var(--skin-color);
+    border-bottom: 5px solid var(--accent-color);
+    border-left: 5px solid var(--accent-color);
     bottom: 0;
     left: 0;
 }
 
-.aside-container .logo a::after {
+.sidebar-container .logo a::after {
     content: '';
     position: absolute;
     width: 20px;
     height: 20px;
-    border-top: 5px solid var(--skin-color);
-    border-right: 5px solid var(--skin-color);
+    border-top: 5px solid var(--accent-color);
+    border-right: 5px solid var(--accent-color);
     top: 0;
     right: 0;
 }
 
-.aside-container .nav-toggler {
+.sidebar-container .nav-toggler {
     height: 40px;
     width: 45px;
     border: 1px solid var(--bg-black-50);
@@ -199,47 +240,62 @@ ul {
     display: none;
     align-items: center;
     justify-content: center;
+    transition: all 0.3s ease;
 }
 
-.aside-container .nav-toggler span {
+.sidebar-container .nav-toggler span {
     height: 2px;
     width: 18px;
-    background: var(--skin-color);
+    background: var(--accent-color);
     display: inline-block;
     position: relative;
 }
 
-.aside-container .nav-toggler span::before {
+.sidebar-container .nav-toggler.open span {
+    background-color: transparent;
+}
+
+.sidebar-container .nav-toggler span::before {
     content: '';
     height: 2px;
     width: 18px;
-    background: var(--skin-color);
+    background: var(--accent-color);
     position: absolute;
     top: -6px;
     left: 0;
 }
 
-.aside-container .nav-toggler span::after {
+.sidebar-container .nav-toggler.open span::before {
+    transform: rotate(45deg);
+    top: 0;
+}
+
+.sidebar-container .nav-toggler span::after {
     content: '';
     height: 2px;
     width: 18px;
-    background: var(--skin-color);
+    background: var(--accent-color);
     position: absolute;
     top: 6px;
     left: 0;
 }
 
-.aside-container .nav {
+.sidebar-container .nav-toggler.open span::after {
+    transform: rotate(-45deg);
+    top: 0;
+}
+
+.sidebar-container .nav {
     margin-top: 50px;
 }
 
-.aside-container .nav li {
+.sidebar-container .nav li {
     margin-bottom: 20px;
     display: block;
 
 }
 
-.aside-container .nav li a {
+.sidebar-container .nav li a {
     font-size: 16px;
     font-weight: 600;
     display: block;
@@ -248,22 +304,22 @@ ul {
     padding: 5px 15px;
 }
 
-.aside-container .nav li a.active {
-    color: var(--skin-color);
+.sidebar-container .nav li a.active {
+    color: var(--accent-color);
 }
 
-.aside-container .nav li a i {
+.sidebar-container .nav li a i {
     margin-right: 15px;
 }
 
 /* ====== home ====== */
-.home-section {
+.home {
     min-height: 100vh;
     display: flex;
     color: var(--text-black-900);
 }
 
-.home-section .home-info {
+.home .home-info {
     flex: 0 0 60%;
     max-width: 60%;
 }
@@ -277,7 +333,7 @@ h3.hello span {
     font-family: 'Clicker Script', cursive;
     font-size: 30px;
     font-weight: 700;
-    color: var(--skin-color);
+    color: var(--accent-color);
 }
 
 .home-info .first-text {
@@ -288,7 +344,7 @@ h3.hello span {
 .home-info .typing-text {
     font-size: 30px;
     margin: 15px 0px;
-    color: var(--skin-color);
+    color: var(--accent-color);
 }
 
 .typing-text::before {
@@ -319,36 +375,14 @@ h3.hello span {
     color: var(--text-black-700);
 }
 
-.home-section .home-img {
+.home .home-img {
     flex: 0 0 40%;
     max-width: 40%;
     text-align: center;
     position: relative;
 }
 
-.home-img::before {
-    content: '';
-    position: absolute;
-    height: 80px;
-    width: 80px;
-    border-top: 10px solid var(--skin-color);
-    border-left: 10px solid var(--skin-color);
-    left: -20px;
-    top: -40px;
-}
-
-.home-img::after {
-    content: '';
-    position: absolute;
-    height: 80px;
-    width: 80px;
-    border-bottom: 10px solid var(--skin-color);
-    border-right: 10px solid var(--skin-color);
-    right: 20px;
-    bottom: -40px;
-}
-
-.home-section .home-img img {
+.home .home-img img {
     margin: auto;
     border-radius: 5px;
     height: 350px;
@@ -373,7 +407,7 @@ h3.hello span {
 }
 
 .about .about-content .about-text h3 span {
-    color: var(--skin-color);
+    color: var(--accent-color);
 }
 
 .about .about-content .about-text p {
@@ -453,7 +487,7 @@ h3.hello span {
     top: 0;
     height: 100%;
     border-radius: 4px;
-    background-color: var(--skin-color);
+    background-color: var(--accent-color);
 }
 
 .about .about-content .skills .skill-item .skill-percent {
@@ -471,9 +505,6 @@ h3.hello span {
     flex: 0 0 50%;
     max-width: 50%;
     margin-top: 30px;
-}
-
-.about .about-content .experience {
 }
 
 .about .about-content h3.title {
@@ -514,7 +545,7 @@ h3.hello span {
     height: 100%;
     left: 7px;
     top: 0;
-    background-color: var(--skin-color);
+    background-color: var(--accent-color);
 }
 
 .about .about-content .timeline .circle-dot {
@@ -524,7 +555,7 @@ h3.hello span {
     height: 15px;
     width: 15px;
     border-radius: 50%;
-    background-color: var(--skin-color);
+    background-color: var(--accent-color);
 }
 
 .about .about-content .timeline .timeline-date {
@@ -554,3 +585,149 @@ h3.hello span {
     text-align: justify;
     color: var(--text-black-700);
 }
+
+/* ====== portfolio ====== */
+.portfolio .container {
+    padding-bottom: 40px;
+}
+.portfolio .portfolio-heading {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 40px;
+}
+
+.portfolio .portfolio-heading h2 {
+    color: var(--text-black-900);
+    font-weight: 500;
+
+}
+
+.portfolio .portfolio-item {
+    flex: 0 0 50%;
+    max-width: 50%;
+    margin-bottom: 30px;
+}
+
+.portfolio .portfolio-item-inner {
+    border: 6px solid var(--bg-black-100);
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.portfolio .portfolio-item-inner .portfolio-img img {
+    width: 100%;
+    display: block;
+
+}
+
+/* ====== contact ====== */
+.footer-container {
+    background: var(--bg-color);
+}
+
+.contact-title {
+    color: var(--text-black-900);
+    text-align: center;
+    font-size: 25px;
+    font-weight: 25px;
+    margin-bottom: 20px;
+}
+
+.contact .contact-item {
+    flex: 0 0 25%;
+    max-width: 25%;
+    text-align: center;
+}
+
+.contact .contact-item .icon {
+    display: inline-block;
+}
+
+.contact .contact-item .icon .fa {
+    font-size: 25px;
+    color: var(--accent-color);
+}
+
+.contact .contact-item .icon .fa-brands {
+    font-size: 25px;
+    color: var(--accent-color);
+}
+
+@media (max-width:1199px) {
+    
+    .sidebar-container {
+        left: -270px;
+    }
+
+    .sidebar-container.open {
+        left: 0;
+    }
+
+    .sidebar-container .nav-toggler {
+        display: flex;
+        left: 30px;
+    }
+
+    .sidebar-container .nav-toggler.open {
+        left: 300px;
+    }
+
+    .section {
+        left: 0;
+    }
+
+    /* ====== fix ====== */
+    .section.open {
+        left: 270px;
+    }
+
+    .main-content {
+        padding-left: 0px;
+    }
+
+    .about .about-content .personal-info .info-item p span {
+        display: block;
+        margin-left: 0;
+    }
+}
+
+@media (max-width:991px) {
+    
+    .contact .contact-item {
+        flex: 0 0 50%;
+        max-width: 50%;
+        margin-bottom: 30px;
+    }
+
+    .home .home-info {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .home .home-img {
+        display:none;
+    }
+    
+}
+
+@media (max-width:767px) {
+
+    .about .about-content .education,
+    .about .about-content .experience,
+    .portfolio .portfolio-item {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+}
+
+/* @media (max-width:730px) {
+
+    .about .about-content .personal-info,
+    .about .about-content .skills {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+} */

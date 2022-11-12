@@ -7,15 +7,18 @@
     <title>Danielle's Website</title>
 
     <!--CSS Files-->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="skins/colour-1.css">
+    <!-- <link rel="stylesheet" href="skins/colour-1.css"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <!-- <link rel="stylesheet" href="skins/colour-darkmode.css" class="light-dark" title="colour-darkmode" disabled> -->
+    <link rel="stylesheet" href="light-dark.css">
 </head>
 <body>
     <!--MAIN Container Start-->
     <div class"main-container">
-        <!--ASIDE Container Start-->
-        <div class="aside-container">
+        <!--SIDEBAR Container Start-->
+        <div class="sidebar-container">
             <div class="logo">
                 <a href="#">DL</a>
             </div>
@@ -23,31 +26,34 @@
                 <span></span>
             </div>
             <ul class="nav">
-                <li><a href="#" class="active"><i class="fa fa-home"></i>Home</a></li>
-                <li><a href="#"><i class="fa fa-user"></i>About</a></li>
-                <li><a href="#"><i class="fa fa-list"></i>Resumé</a></li>
-                <li><a href="#"><i class="fa fa-comments"></i>Contact</a></li>
+                <li><a href="#home" class="active"><i class="fa fa-home"></i>Home</a></li>
+                <li><a href="#about"><i class="fa fa-user"></i>About</a></li>
+                <!-- <li><a href="#"><i class="fa fa-list"></i>Resumé</a></li> -->
+                <li><a href="#portfolio"><i class="fa fa-layer-group"></i>Portfolio</a></li>
+                <li><a href="#contact"><i class="fa fa-comments"></i>Contact</a></li>
             </ul>
         </div>
-        <!--ASIDE Container End-->
+        <!--SIDEBAR Container End-->
 
         <!--MAIN Content Start-->
         <div class="main-content">
             <!--HOME Section Start-->
-            <section class="home-section hidden">
+            <section class="home section active" id="home">
                 <div class="container">
                     <div class="row">
                         <div class="home-info padd-15">
                             <h3 class="hello">Hi there! My name is <span class="name">Danielle Lim</span></h3>
-                            <h3><span class="first-text">I'm a</span></h3>
-                            <h3><span class="typing-text">Software Engineer</span></h3>
+                            <h3>
+                                <span class="first-text">I'm a </span>
+                                <span class="typing-text">Software Engineer</span>
+                            </h3>
                             <!-- <h3 class="my-profession">I'm a <span class="typing">CPA (Chartered Professional Accountant)</span></h3>
                             <h3 class="my-profession">I'm a <span class="typing">sports lover</span></h3>
                             <h3 class="my-profession">I'm a <span class="typing">lifetime learner</span></h3>
                             <h3 class="my-profession">I'm a <span class="typing">connector</span></h3>
                             <h3 class="my-profession">I'm a <span class="typing">Marvel fanatic</span></h3> -->
-                            <p>DESCRIPTION</p>
-                            <a href="#contact" class="btn hire-me">Open to Work</a>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi tempore illum soluta rem beatae! Corrupti facere voluptatibus vel cum ex, quam amet adipisci modi nemo repellendus exercitationem eius inventore magnam.</p>
+                            <!-- <a href="#contact" class="btn hire-me">Open to Work</a> -->
                         </div>
                         <div class="home-img padd-15">
                             <img src="images/Blurred-Circle.png" alt="Profile Picture">
@@ -58,7 +64,7 @@
             <!--HOME Section End-->
 
             <!--ABOUT Section Start-->
-            <section class="about section">
+            <section class="about section" id="about">
                 <div class="container">
                     <div class="row">
                         <div class="section-title padd-15">
@@ -110,12 +116,26 @@
                                 <div class="skill-item padd-15">
                                     <h5>HTML</h5>
                                     <div class="progress">
-                                        <div class="progress-in" style="width: 70%"></div>
+                                        <div class="progress-in" style="width: 80%"></div>
                                         <div class="skill-percent">70%</div>
                                     </div>
                                 </div>
                                 <div class="skill-item padd-15">
                                     <h5>CSS</h5>
+                                    <div class="progress">
+                                        <div class="progress-in" style="width: 80%"></div>
+                                        <div class="skill-percent">70%</div>
+                                    </div>
+                                </div>
+                                <div class="skill-item padd-15">
+                                    <h5>Python</h5>
+                                    <div class="progress">
+                                        <div class="progress-in" style="width: 70%"></div>
+                                        <div class="skill-percent">70%</div>
+                                    </div>
+                                </div>
+                                <div class="skill-item padd-15">
+                                    <h5>SQL</h5>
                                     <div class="progress">
                                         <div class="progress-in" style="width: 70%"></div>
                                         <div class="skill-percent">70%</div>
@@ -125,8 +145,8 @@
                         </div>
                         <div class="row">
                             <div class="buttons padd-15">
-                                <a ref="#" class="btn">Download Resumé</a>
-                                <a ref="#contact" class="btn hire-me">Hire Me</a>
+                                <a ref="#" class="btn download-cv">Download Resumé</a>
+                                <a ref="#contact" data-section-index="1" class="btn hire-me">Contact Me</a>
                             </div>
                         </div>
                     </div> 
@@ -226,19 +246,115 @@
                 </div>
             </section>
             <!--ABOUT Section End-->
+
+            <!--PORTFOLIO Section Start-->
+            <section class="portfolio section" id="portfolio">
+                <div class="container">
+                    <div class="row">
+                        <div class="section-title padd-15">
+                            <h2>Portfolio</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="portfolio-heading padd-15">
+                            <h2>Check out my work:</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <!--portfolio item -->
+                        <div class="portfolio-item padd-15">
+                            <div class="portfolio-item-inner shadow-dark">
+                                <div class="portfolio-img">
+                                    <img src="images/portfolio/interrupt.png" alt="interrupt-extension">
+                                </div>
+                            </div>
+                        </div>
+                        <!--portfolio item -->
+                        <div class="portfolio-item padd-15">
+                            <div class="portfolio-item-inner shadow-dark">
+                                <div class="portfolio-img">
+                                    <img src="images/portfolio/gift.png" alt="gift-app">
+                                </div>
+                            </div>
+                        </div>
+                        <!--portfolio item -->
+                        <div class="portfolio-item padd-15">
+                            <div class="portfolio-item-inner shadow-dark">
+                                <div class="portfolio-img">
+                                    <img src="images/portfolio/restaurant-roulette.png" alt="restaurant-roulette">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--PORTFOLIO Section End-->
+
+            <!--FOOTER Container Start-->
+            <div class="footer-container padd-15">
+
+                <!--CONTACT Section Start-->
+                <section class="contact section" id="contact">
+                    <div class="container">
+                        <!-- <div class="row">
+                            <div class="section-title padd-15">
+                                <h2>Let's Connect!</h2>
+                            </div>
+                        </div> -->
+                        <h4 class="contact-title">Let's Connect!</h4>
+                        <div class="row">
+                            <!--contact link item-->
+                            <div class="contact-item padd-15">
+                                <div class="icon"><i class="fa fa-envelope"></i></div>
+                                <h4>Email</h4>
+                                <p>limdaniellee@gmail.com</p>
+                            </div>
+                            <!--contact link item-->
+                            <div class="contact-item padd-15">
+                                <div class="icon"><i class="fa-brands fa-linkedin"></i></div>
+                                <h4>LinkedIn</h4>
+                                <p>URL</p>
+                            </div>
+                            <!--contact link item-->
+                            <div class="contact-item padd-15">
+                                <div class="icon"><i class="fa-brands fa-github"></i></div>
+                                <h4>GitHub</h4>
+                                <p>URL</p>
+                            </div>
+                            <!--contact link item-->
+                            <div class="contact-item padd-15">
+                                <div class="icon"><i class="fa fa-globe-americas"></i></div>
+                                <h4>Website</h4>
+                                <p>https://itsdaniii.github.io/</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!--CONTACT Section End-->
+
+            </div>
+            <!--FOOTER Container End-->
+
         </div>
         <!--MAIN Content End-->
 
     </div>
     <!--MAIN Container End-->
 
-    <!--JavaScript Files-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js" referrerpolicy="no-referrer"></script>
-    <script src="js/app.js"></script>
-    <hav class="navbar">
-        <div class="navbar__container">
-            
+    <!-- Style Switcher Start-->
+    <div class="style-switcher">
+        <div class="light-dark s-icon">
+            <i class="fas "></i>
         </div>
-    </hav>
+    </div>
+    <!-- Style Switcher End-->
+
+    <!--JavaScript Files-->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js" referrerpolicy="no-referrer"></script>
+    <script src="app.js"></script>
+    <script src="light-dark.js"></script>
+
+
 </body>
 </html>
