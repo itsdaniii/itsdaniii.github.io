@@ -656,6 +656,10 @@ h3.hello span {
 
 @media (max-width:1199px) {
     
+    .section .container {
+        padding-top: 70px;
+    }
+
     .sidebar-container {
         left: -270px;
     }

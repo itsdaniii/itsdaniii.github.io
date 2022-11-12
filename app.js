@@ -18,14 +18,12 @@ const nav = document.querySelector(".nav"),
         a.addEventListener("click", function() {
 
             /* ====== remove backsplash class ====== */
-            // for (let k = 0; k < totalSection; k++) {
-            //     allSection[k].classList.remove("back-section")
-            // }
+            // removeBackSection();
 
             /* ====== activate page ====== */
             for(let j = 0; j < totalNavList; j++) {
                 if (navList[j].querySelector("a").classList.contains("active")) {
-                    // allSection[j].classList.add("back-section");
+                    // addBackSection(j);
                 }
                 navList[j].querySelector("a").classList.remove("active");
             }
@@ -38,6 +36,18 @@ const nav = document.querySelector(".nav"),
             }
         })
     }
+
+    // /* ====== helper function to add backsplash class ====== */
+    // function addBackSection(num) {
+    //     allSection[num].classList.add("back-section");
+    // }
+
+    // /* ====== helper function to remove backsplash class ====== */
+    // function removeBackSection() {
+    //     for (let k = 0; k < totalSection; k++) {
+    //             allSection[k].classList.remove("back-section")
+    //         }
+    // }
 
     /* ====== helper function to reveal section ====== */
     function showSection(element) {
@@ -55,13 +65,20 @@ const nav = document.querySelector(".nav"),
         for (let i = 0; i < totalNavList; i++) {
             navList[i].querySelector("a").classList.remove("active");
             const target = element.getAttribute("href").split("#")[1];
+
+            if (target === navList[i].querySelector("a").getAttribute("href").split("#")[1]) {
+                navList[i].querySelector("a").classList.add("active");
+            }
         }
     }
 
     /* ====== hire me button ====== */
     document.querySelector(".hire-me").addEventListener("click", function() {
+        // const sectionIndex = this.getAttribute("data-section-index");
         showSection(this);
         updateNav(this);
+        // removeBackSection();
+        // addBackSection(sectionIndex);
     })
 
     /* ====== navigation button ====== */
