@@ -1,9 +1,11 @@
 /* ====== typing animation ====== */
 var typed = new Typed(".typing-text", {
-    strings:["", "Software Developer", "CPA", "sports lover", "lifetime learner", "connector", "Marvel fanatic"],
+    strings:["Software Developer", "CPA", "sports lover", "lifetime learner", "connector", "Marvel fanatic"],
     typeSpeed:100,
-    BackSpeed: 60,
-    loop:true
+    backSpeed: 70,
+    loop:true,
+    backDelay: 2000
+    
 })
 
 /* ====== sidebar navigation ====== */

@@ -146,13 +146,8 @@ ul {
 }
 
 .btn {
-    font-size: 16px;
-    font-weight: 500;
-    padding: 12px 35px;
-    color: white;
-    border-radius: 40px;
-    display: inline-block;
-    white-space: nowrap;
+    padding: 6px 30px;
+    border-radius: 30px;
     border: none;
     background: var(--accent-color);
     transition: all 0.3s ease;
@@ -363,33 +358,16 @@ h3.hello span {
     color: var(--accent-color);
 }
 
-.typing-text::before {
-    content: "";
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    border-left: 2px solid #f85830;
-    background-color: var(--bg-black-900);
-    animation: animate 4s steps(12) infinite;
+.typed-cursor {
+    color: #f85830;
+    font-size: 40px;
 }
 
-@keyframes animate {
-    40%, 60% {
-        left: 100%;
-    }
-
-    100% {
-        left: 0%;
-    }
-    
-}
-
-.home-info p {
+/* .home-info p {
     margin-bottom: 70px;
     font-size: 20px;
     color: var(--text-black-700);
-}
+} */
 
 .home .home-img {
     flex: 0 0 40%;
@@ -464,17 +442,6 @@ h3.hello span {
     margin-top: 40px;
 }
 
-.about .about-content .buttons {
-    margin-top: 30px;
-
-}
-
-.about .about-content .buttons .btn {
-    margin-right: 15px;
-    margin-top: 10px;
-    
-}
-
 .about .about-content .skills .skill-item {
     flex: 0 0 100%;
     max-width: 50%;
@@ -516,6 +483,26 @@ h3.hello span {
 
 }
 
+/* ====== resume ====== */
+.resume .section-title {
+    margin-bottom: 0;
+}
+
+.resume .buttons {
+    margin-top: 0;
+    margin-bottom: 20px;
+    flex: 0 0 100%;
+    max-width: 100%;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.resume .buttons .btn {
+    margin-right: 15px;
+    margin-top: 10px;
+}
+
 .resume .education, 
 .resume .experience {
     flex: 0 0 50%;
@@ -523,9 +510,8 @@ h3.hello span {
     margin-top: 30px;
 }
 
-.resume h2.title {
-    font-family: 'Abril Fatface', cursive;
-    font-size: 40px;
+.resume h3.title {
+    font-size: 30px;
     margin-bottom: 30px;
     font-weight: 300;
     color: var(--text-black-900);
