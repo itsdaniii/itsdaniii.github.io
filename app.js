@@ -22,15 +22,16 @@ const nav = document.querySelector(".nav"),
 
             /* ====== activate page ====== */
             for(let j = 0; j < totalNavList; j++) {
-                if (navList[j].querySelector("a").classList.contains("active")) {
-                    // addBackSection(j);
-                }
+                // if (navList[j].querySelector("a").classList.contains("active")) {
+                //     addBackSection(j);
+                // }
                 navList[j].querySelector("a").classList.remove("active");
             }
 
             this.classList.add("active")
             showSection(this);
 
+            /* ====== switch to toggler button ====== */
             if (window.innerWidth < 1200) {
                 sidebarSectionTogglerBtn();
             }
