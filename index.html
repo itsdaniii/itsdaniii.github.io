@@ -4,13 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Danielle's Website</title>
+    <title>Danielle Lim</title>
 
     <!--CSS Files-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
     <!-- <link rel="stylesheet" href="skins/colour-1.css"> -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com-/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <!-- <link rel="stylesheet" href="fonts/Apparel-Font-Family/Fontspring-DEMO-apparel-bold.otf" -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Abril+Fatface">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300">
     <!-- <link rel="stylesheet" href="skins/colour-darkmode.css" class="light-dark" title="colour-darkmode" disabled> -->
     <link rel="stylesheet" href="light-dark.css">
 </head>
@@ -20,15 +24,15 @@
         <!--SIDEBAR Container Start-->
         <div class="sidebar-container">
             <div class="logo">
-                <a href="#">DL</a>
+                <a href="#home">DL</a>
             </div>
             <div class="nav-toggler">
                 <span></span>
             </div>
             <ul class="nav">
                 <li><a href="#home" class="active"><i class="fa fa-home"></i>Home</a></li>
-                <li><a href="#about"><i class="fa fa-user"></i>About</a></li>
-                <!-- <li><a href="#"><i class="fa fa-list"></i>Resumé</a></li> -->
+                <li><a href="#about"><i class="fa fa-user"></i> About</a></li>
+                <li><a href="#resume"><i class="fa fa-list"></i>Resumé</a></li>
                 <li><a href="#portfolio"><i class="fa fa-layer-group"></i>Portfolio</a></li>
                 <li><a href="#contact"><i class="fa fa-comments"></i>Contact</a></li>
             </ul>
@@ -52,7 +56,7 @@
                             <h3 class="my-profession">I'm a <span class="typing">lifetime learner</span></h3>
                             <h3 class="my-profession">I'm a <span class="typing">connector</span></h3>
                             <h3 class="my-profession">I'm a <span class="typing">Marvel fanatic</span></h3> -->
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi tempore illum soluta rem beatae! Corrupti facere voluptatibus vel cum ex, quam amet adipisci modi nemo repellendus exercitationem eius inventore magnam.</p>
+                            <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi tempore illum soluta rem beatae! Corrupti facere voluptatibus vel cum ex, quam amet adipisci modi nemo repellendus exercitationem eius inventore magnam.</p> -->
                             <!-- <a href="#contact" class="btn hire-me">Open to Work</a> -->
                         </div>
                         <div class="home-img padd-15">
@@ -83,7 +87,7 @@
                         </div>
                        </div>
                        <div class="row">
-                        <div class="personal-info padd-15">
+                        <div class="personal-info padd-15" id="info">
                             <div class="row">
                                 <div class="info-item padd-15">
                                     <p> Age : <span>27 </span></p>
@@ -99,7 +103,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="skills padd-15">
+                        <div class="skills padd-15" id="skills">
                             <div class="row">
                                 <div class="skill-item padd-15">
                                     <h5>Java</h5>
@@ -147,14 +151,22 @@
                         </div>
                         <div class="row">
                             <div class="buttons padd-15">
-                                <a ref="Lim_Danielle_Resume.pdf" class="btn download-cv" download>Download Resumé</a>
+                                <a ref="https://drive.google.com/file/d/1FkpmedcUleWO3QxyNGA244R3i9ZZxnx2/view?usp=sharing" class="btn download-cv" >Resumé</a>
                                 <a ref="#contact" data-section-index="1" class="btn hire-me">Contact Me</a>
                             </div>
                         </div>
-                    </div> 
+                        </div> 
+                    </div>
+                </div>
+            </section>
+            <!--ABOUT Section End-->
+
+            <!--RESUME Section Start-->
+            <section class="resume section" id="resume">
+                <div class="container">
                     <div class="row">
-                        <div class="education padd-15">
-                            <h3 class="title">Education</h3>
+                        <div class="education padd-15" id="education">
+                            <h2 class="title">Education</h2>
                             <div class="row">
                                 <div class="timeline-box padd-15">
                                     <div class="timeline shadow-dark">
@@ -198,8 +210,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="experience padd-15">
-                            <h3 class="title">Experience</h3>
+                        <div class="experience padd-15" id="experience">
+                            <h2 class="title">Experience</h2>
                             <div class="row">
                                 <div class="timeline-box padd-15">
                                     <div class="timeline shadow-dark">
@@ -253,10 +265,9 @@
                             </div>
                         </div>
                     </div>
-                    </div>
                 </div>
             </section>
-            <!--ABOUT Section End-->
+            <!--RESUME Section End-->
 
             <!--PORTFOLIO Section Start-->
             <section class="portfolio section" id="portfolio">
@@ -324,25 +335,28 @@
                             <div class="contact-item padd-15">
                                 <div class="icon"><i class="fa fa-envelope"></i></div>
                                 <h4>Email</h4>
-                                <p>limdaniellee@gmail.com</p>
+                                <p>need to update link</p>
                             </div>
                             <!--contact link item-->
                             <div class="contact-item padd-15">
-                                <div class="icon"><i class="fa-brands fa-linkedin"></i></div>
+                                <a href="https://www.linkedin.com/in/limdanielle/">
+                                    <div class="icon"><i class="fa-brands fa-linkedin"></i></div>
+                                </a>
                                 <h4>LinkedIn</h4>
-                                <p>URL</p>
                             </div>
                             <!--contact link item-->
                             <div class="contact-item padd-15">
-                                <div class="icon"><i class="fa-brands fa-github"></i></div>
+                                <a href="https://github.com/itsdaniii">
+                                    <div class="icon"><i class="fa-brands fa-github"></i></div>
+                                </a>
                                 <h4>GitHub</h4>
-                                <p>URL</p>
                             </div>
                             <!--contact link item-->
                             <div class="contact-item padd-15">
-                                <div class="icon"><i class="fa fa-globe-americas"></i></div>
+                                <a href="https://itsdaniii.github.io/#home">
+                                    <div class="icon"><i class="fa fa-globe-americas"></i></div>
+                                </a>
                                 <h4>Website</h4>
-                                <p>https://itsdaniii.github.io/</p>
                             </div>
                         </div>
                     </div>
