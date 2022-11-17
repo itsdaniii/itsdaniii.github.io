@@ -1,6 +1,6 @@
 /* ====== typing animation ====== */
 var typed = new Typed(".typing-text", {
-    strings:["Software Developer", "CPA", "sports lover", "lifetime learner", "connector", "Marvel fanatic"],
+    strings:["software developer", "business strategist", "hockey fan", "lifetime learner", "people connector", "Marvel geek", "project manager"],
     typeSpeed:100,
     backSpeed: 70,
     loop:true,
@@ -39,6 +39,13 @@ const nav = document.querySelector(".nav"),
             }
         })
     }
+
+    /* ====== sidebar scrollspy ====== */
+    document.addEventListener("DOMContentLoaded", function(){
+        var myScrollSpy = new bootstrap.ScrollSpy(document.body, {
+            target: "#myScrollSpy"
+        })
+    });
 
     // /* ====== helper function to add backsplash class ====== */
     // function addBackSection(num) {
