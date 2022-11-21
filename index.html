@@ -18,9 +18,9 @@
     <!-- <link rel="stylesheet" href="skins/colour-darkmode.css" class="light-dark" title="colour-darkmode" disabled> -->
     <link href="light-dark.css" rel="stylesheet">
 </head>
-<body data-bs-spy="scroll" data-bs-target="#myScrollSpy" data-bs-offset="60">
+<body>
     <!--MAIN Container Start-->
-    <div class="main-container">
+    <div class="main-container" data-spy="scroll" data-target="#myScrollSpy">
         <!--SIDEBAR Container Start-->
         <div class="sidebar-container">
             <div class="logo">
@@ -29,12 +29,12 @@
             <div class="nav-toggler">
                 <span></span>
             </div>
-            <nav id="myScrollSpy">
+            <nav id="myScrollSpy navbar">
                 <ul class="nav">
-                    <li><a href="#home" class="active"><i class="fa fa-home"></i>Home</a></li>
-                    <li><a href="#about"><i class="fa fa-user"></i> About</a></li>
-                    <li><a href="#resume"><i class="fa fa-list"></i>Resumé</a></li>
-                    <li><a href="#portfolio"><i class="fa fa-layer-group"></i>Portfolio</a></li>
+                    <li class="nav-item"><a href="#home" class="active"><i class="fa fa-home"></i>Home</a></li>
+                    <li class="nav-item"><a href="#about"><i class="fa fa-user"></i> About</a></li>
+                    <li class="nav-item"><a href="#resume"><i class="fa fa-list"></i>Resumé</a></li>
+                    <li class="nav-item"><a href="#portfolio"><i class="fa fa-layer-group"></i>Portfolio</a></li>
                     <!-- <li><a href="#contact"><i class="fa fa-comments"></i>Contact</a></li> -->
                     <li class="socials">
                         <!--contact link item-->
@@ -73,7 +73,7 @@
         <!--SIDEBAR Container End-->
 
         <!--MAIN Content Start-->
-        <div class="main-content">
+        <div class="main-content" data-spy="scroll" data-target="#myScrollSpy" data-offset="15">
             <!--HOME Section Start-->
             <section class="home section active" id="home">
                 <div class="container">
@@ -265,9 +265,9 @@
                                             </h3>
                                             <h4 class="timeline-title">Software Developer Intern</h4>
                                             <p class="timeline-text">Vidyard</p>
-                                            <p class="details">
-                                                <ul></ul>
-                                            </p>
+                                            <ul class="details">
+                                                <li></li>
+                                            <ul/>
                                         </div>
                                         <!-- TIMELINE ITEM -->
                                         <div class="timeline-item">
@@ -277,11 +277,11 @@
                                             </h3>
                                             <h4 class="timeline-title">Associate Systems Analyst</h4>
                                             <p class="timeline-text">Kabam Games Inc.</p>
-                                            <p class="details">
-                                                <ul>- Spearheaded an initiative to automate finance processes using Project Management Life Cycle (PMLC) phases estimated to reduce annual costs by $80,000 and decrease annual manual labour hours by 1,200</ul>
-                                                <ul>- Built data forecasting model with Python Pandas to predict licensing fees by applying coursework knowledge</ul>
-                                                <ul>- Created SQL training guides for the Finance team to improve efficiency and quality of information retrieval</ul>
-                                            </p>
+                                            <ul class="details">
+                                                <li>- Spearheaded an initiative to automate finance processes using Project Management Life Cycle (PMLC) phases estimated to reduce annual costs by $80,000 and decrease annual manual labour hours by 1,200</li>
+                                                <li>- Built data forecasting model with Python Pandas to predict licensing fees by applying coursework knowledge</li>
+                                                <li>- Created SQL training guides for the Finance team to improve efficiency and quality of information retrieval</li>
+                                            </ul>
                                         </div>
                                         <!-- TIMELINE ITEM -->
                                         <div class="timeline-item">
@@ -291,10 +291,10 @@
                                             </h3>
                                             <h4 class="timeline-title">Teaching Assistant</h4>
                                             <p class="timeline-text">University of British Columbia</p>
-                                            <p class="details">
-                                                <ul>- Ranked highly at 97% by student reviews for communicating complex topics concisely in 40-person lectures</ul>
-                                                <ul>- Iteratively tailored teaching practices and weekly slide decks by adapting to diverse audience learning goals</ul>
-                                            </p>
+                                            <ul class="details">
+                                                <li>- Ranked highly at 97% by student reviews for communicating complex topics concisely in 40-person lectures</li>
+                                                <li>- Iteratively tailored teaching practices and weekly slide decks by adapting to diverse audience learning goals</li>
+                                            </ul>
                                         </div>
                                         <!-- TIMELINE ITEM -->
                                         <div class="timeline-item">
@@ -304,10 +304,10 @@
                                             </h3>
                                             <h4 class="timeline-title">IT Business Analyst / Project Manager</h4>
                                             <p class="timeline-text">Peoples Group</p>
-                                            <p class="details">
-                                                <ul>- Managed accounting automation overhaul predicted to save 144 hours/year while vastly reducing manual errors by leveraging business and technical acumen to liaise and translate requirements across departments</ul>
-                                                <ul>- Directed a three-month CRM upgrade project ahead of target timeline with positive UAT feedback and reduced internal and external user hardships through successful employment of waterfall methodology</ul>
-                                            </p>
+                                            <ul class="details">
+                                                <li>- Managed accounting automation overhaul predicted to save 144 hours/year while vastly reducing manual errors by leveraging business and technical acumen to liaise and translate requirements across departments</li>
+                                                <li>- Directed a three-month CRM upgrade project ahead of target timeline with positive UAT feedback and reduced internal and external user hardships through successful employment of waterfall methodology</li>
+                                            </ul>
                                         </div>
                                         <!-- TIMELINE ITEM -->
                                         <div class="timeline-item">
@@ -317,10 +317,10 @@
                                             </h3>
                                             <h4 class="timeline-title">Experienced Senior Associate (Audit)</h4>
                                             <p class="timeline-text">PwC Canada</p>
-                                            <p class="details">
-                                                <ul>- Enhanced audit efficiency by automating 750 hours into 30 hours (annual savings) with Alteryx workflows</ul>
-                                                <ul>- Supervised teams of 3-4 associates in a high-pressure environment to meet critical regulatory deadlines through cultivating supportive, positive working relationships and providing additional 1:1 mentorship</ul>
-                                            </p>
+                                            <ul class="details">
+                                                <li>- Enhanced audit efficiency by automating 750 hours into 30 hours (annual savings) with Alteryx workflows</li>
+                                                <li>- Supervised teams of 3-4 associates in a high-pressure environment to meet critical regulatory deadlines through cultivating supportive, positive working relationships and providing additional 1:1 mentorship</li>
+                                            </ul>
                                         </div>
                                     </div>
                                 </div>

@@ -40,71 +40,89 @@ const nav = document.querySelector(".nav"),
         })
     }
 
-    /* ====== sidebar scrollspy ====== */
-    document.addEventListener("DOMContentLoaded", function(){
-        var myScrollSpy = new bootstrap.ScrollSpy(document.body, {
-            target: "#myScrollSpy"
-        })
+/* ====== sidebar scrollspy ====== */
+// const scrollSpy = new bootstrap.ScrollSpy(document.body, {
+//     target: '#myScrollSpy'
+// })
+
+// document.addEventListener("DOMContentLoaded", function(){
+//     var myScrollSpy = new bootstrap.ScrollSpy(document.body, {
+//         target: "#myScrollSpy"
+//     })
+// });
+
+// $(document).ready(function(){  
+//     $('body').scrollspy({ target: '#myScrollSpy', offset: 50 })  
+//  });  
+
+// /* ====== helper function to add backsplash class ====== */
+// function addBackSection(num) {
+//     allSection[num].classList.add("back-section");
+// }
+
+// /* ====== helper function to remove backsplash class ====== */
+// function removeBackSection() {
+//     for (let k = 0; k < totalSection; k++) {
+//             allSection[k].classList.remove("back-section")
+//         }
+// }
+
+window.addEventListener("resize", ResizeWindow);
+
+function ResizeWindow() {
+    var dataSpyList = [].slice.call(document.querySelectorAll('[data-spy="scroll"]'));
+
+    dataSpyList.forEach(function(dataSpyElement) {
+        bootstrap.ScrollSpy.getInstance(dataSpyElement).refresh();
     });
+}
 
-    // /* ====== helper function to add backsplash class ====== */
-    // function addBackSection(num) {
-    //     allSection[num].classList.add("back-section");
-    // }
+/* ====== helper function to reveal section ====== */
+function showSection(element) {
+    for (let i = 0; i < totalSection; i++) {
+        allSection[i].classList.remove("active")
+    }
 
-    // /* ====== helper function to remove backsplash class ====== */
-    // function removeBackSection() {
-    //     for (let k = 0; k < totalSection; k++) {
-    //             allSection[k].classList.remove("back-section")
-    //         }
-    // }
+    const target = element.getAttribute("href").split("#")[1];
+    document.querySelector("#" + target).classList.add("active")
+    
+}
 
-    /* ====== helper function to reveal section ====== */
-    function showSection(element) {
-        for (let i = 0; i < totalSection; i++) {
-            allSection[i].classList.remove("active")
-        }
-
+/* ====== helper function to update sidebar ====== */
+function updateNav(element) {
+    for (let i = 0; i < totalNavList; i++) {
+        navList[i].querySelector("a").classList.remove("active");
         const target = element.getAttribute("href").split("#")[1];
-        document.querySelector("#" + target).classList.add("active")
-        
-    }
 
-    /* ====== helper function to update sidebar ====== */
-    function updateNav(element) {
-        for (let i = 0; i < totalNavList; i++) {
-            navList[i].querySelector("a").classList.remove("active");
-            const target = element.getAttribute("href").split("#")[1];
-
-            if (target === navList[i].querySelector("a").getAttribute("href").split("#")[1]) {
-                navList[i].querySelector("a").classList.add("active");
-            }
+        if (target === navList[i].querySelector("a").getAttribute("href").split("#")[1]) {
+            navList[i].querySelector("a").classList.add("active");
         }
     }
+}
 
-    /* ====== hire me button ====== */
-    document.querySelector(".hire-me").addEventListener("click", function() {
-        // const sectionIndex = this.getAttribute("data-section-index");
-        showSection(this);
-        updateNav(this);
-        // removeBackSection();
-        // addBackSection(sectionIndex);
+/* ====== hire me button ====== */
+document.querySelector(".hire-me").addEventListener("click", function() {
+    // const sectionIndex = this.getAttribute("data-section-index");
+    showSection(this);
+    updateNav(this);
+    // removeBackSection();
+    // addBackSection(sectionIndex);
+})
+
+/* ====== navigation button ====== */
+const navTogglerBtn = document.querySelector(".nav-toggler"),
+    sidebar = document.querySelector(".sidebar-container");
+
+    navTogglerBtn.addEventListener("click", () => {
+        sidebarSectionTogglerBtn();
     })
 
-    /* ====== navigation button ====== */
-    const navTogglerBtn = document.querySelector(".nav-toggler"),
-        sidebar = document.querySelector(".sidebar-container");
+    /* ====== helper function to open sidebar ====== */
+    function sidebarSectionTogglerBtn() {
+        sidebar.classList.toggle("open");
+        navTogglerBtn.classList.toggle("open");
 
-        navTogglerBtn.addEventListener("click", () => {
-            sidebarSectionTogglerBtn();
-        })
-
-        /* ====== helper function to open sidebar ====== */
-        function sidebarSectionTogglerBtn() {
-            sidebar.classList.toggle("open");
-            navTogglerBtn.classList.toggle("open");
-
-            for (let i = 0; i < totalSection; i++) {
-                allSection[i].classList.toggle("open");
-            }
+        for (let i = 0; i < totalSection; i++) {
+            allSection[i].classList.toggle("open");
         }
+    }
