@@ -1,10 +1,10 @@
 /* ====== typing animation ====== */
 var typed = new Typed(".typing-text", {
-    strings:["software developer", "business strategist", "hockey fan", "lifetime learner", "people connector", "Marvel geek", "project manager"],
-    typeSpeed:100,
-    backSpeed: 70,
+    strings:["software developer", "business analyst", "project manager", "hockey fanatic", "lifetime learner", "people person", "Marvel geek", "tennis player", "skier"],
+    typeSpeed:150,
+    backSpeed: 90,
     loop:true,
-    backDelay: 2000
+    backDelay: 1800
     
 })
 
