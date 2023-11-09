@@ -652,6 +652,10 @@ h3.hello span {
     margin-bottom: 30px;
 }
 
+.portfolio .portfolio-item .portfolio-item-name .p {
+    font-weight: 25px;
+}
+
 .portfolio .portfolio-item-inner {
     border: 6px solid var(--bg-black-100);
     border-radius: 10px;
@@ -664,6 +668,7 @@ h3.hello span {
     display: block;
 
 }
+
 
 /* ====== contact ====== */
 .footer-container {
