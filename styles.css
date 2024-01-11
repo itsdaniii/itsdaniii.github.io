@@ -652,8 +652,9 @@ h3.hello span {
     margin-bottom: 30px;
 }
 
-.portfolio .portfolio-item .portfolio-item-name .p {
+.portfolio .portfolio-item .portfolio-item-name {
     font-weight: 25px;
+    color: var(--text-black-700);
 }
 
 .portfolio .portfolio-item-inner {
