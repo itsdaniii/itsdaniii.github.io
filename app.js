@@ -1,8 +1,8 @@
 /* ====== typing animation ====== */
 var typed = new Typed(".typing-text", {
-    strings:["software developer", "business analyst", "project manager", "lifetime learner", "hockey fanatic", "Marvel geek", "tennis player"],
-    typeSpeed: 150,
-    backSpeed: 90,
+    strings:["software developer", "former business analyst", "NHL fanatic", "tennis enthusiast", "lifelong learner", "Marvel geek",  "chartered professional accountant"],
+    typeSpeed: 60,
+    backSpeed: 30,
     loop: true,
     backDelay: 1800
     
